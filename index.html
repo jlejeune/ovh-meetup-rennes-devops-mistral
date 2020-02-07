@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Automation to infinity and beyond thanks to Mistral</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/ovh.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-background="data/ovh-meet-up-brest-digit-event.jpg">
+                    <h1>Mistral</h1>
+                    <h2>Automation to infinity and beyond</h2>
+                    <img src="data/logo-ovh-meet-up-small.png"></img>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <h2>Who are we ?</h2>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section>
+                        <h2>What do we do ?</h2>
+                        <ul class="fragment">
+                            <li>Environment</li>
+                                <ul>
+                                    <li>30 regions</li>
+                                    <li>15k hosts</li>
+                                    <li>310k instances</li>
+                                </ul>
+                            <li>Daily tasks
+                                <ul>
+                                    <li>maintenance/upgrade operations</li>
+                                    <li>incidents management</li>
+                                    <li>continuous product evolutions</li>
+                                </ul>
+                            <li>But only 18 persons in the SRE team</li>
+                        </ul>
+                    </section>
+                    <section data-markdown>
+                        ## We needed a robot
+                        ![Mistral](data/mistral_logo.png)
+                    </section>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section>
+                        <h2>Why Mistral ?</h2>
+                        <ul class="fragment">
+                            <li>Uniformity with public service (configuration mastering)</li>
+                            <li>Easy access to entire OpenStack API via built-in actions</li>
+                            <li>Custom actions can be written easily in Python</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section>
+                        <h2>Use cases</h2>
+                        <ul class="fragment">
+                            <li>Self-healing operations</li>
+                            <li>Large scale upgrades and maintenances</li>
+                        </ul>
+                    </section>
+                    <section data-background="data/alarm_solving_process.jpg" data-background-color="white" data-background-size="contain">
+                    </section>
+                    <section data-background="data/slide.png">
+                        <h3>Large scale upgrades and maintenances</h3>
+                        <ul class="fragment">
+                            <li>50k instances migrated per month</li>
+                            <li>50 datacenter interventions created per month</li>
+                            <li>200 hosts upgraded per day</li>
+                        </ul>
+                    </section>
+                    <section data-markdown data-background="data/slide.png">
+                        ![kibana](data/kibana_mistral.png)
+                    </section>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section>
+                        <h2>Benefits</h2>
+                        <ul class="fragment">
+                            <li>Make maintenance operations easier and faster</li>
+                            <li>Reduce team's workload</li>
+                            <li>Reduce human errors</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section data-markdown data-background="data/slide.png">
+                    ## Conclusion
+                </section>
+
+                <section data-markdown data-background="data/slide.png">
+                    ## Questions ?
+                </section>
+
+                <section data-markdown data-background="data/slide.png">
+                    ## Thanks !
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                slideNumber: 'c/t',
+                pdfSeparateFragments: false,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
