@@ -25,37 +25,202 @@
         <div class="reveal">
             <div class="slides">
                 <section data-background="data/ovh-meet-up-brest-digit-event.jpg">
-                    <h1>Mistral</h1>
-                    <h2>Automation to infinity and beyond</h2>
+                    <h1></h1>
+                    <h2>DevOps feedback & self-healing</h2>
                     <img src="data/logo-ovh-meet-up-small.png"></img>
+                    <aside class="notes">
+                        - Remerciement</br>
+                        - Retour expérience pratiques devops dans une des
+                        équipes public cloud et auto-remédiation</br>
+                        - Importance self-healing dans les pratiques devops
+                    </aside>
                 </section>
 
                 <section data-background="data/slide.png">
                     <h2>Who are we ?</h2>
+                    <ul>Pierre-Samuel</ul>
+                    <ul>Quentin</ul>
+                    <ul>Étienne</ul>
                 </section>
-
                 <section data-background="data/slide.png">
                     <section>
-                        <h2>What do we do ?</h2>
-                        <ul class="fragment">
-                            <li>Environment</li>
-                                <ul>
-                                    <li>30 regions</li>
-                                    <li>15k hosts</li>
-                                    <li>310k instances</li>
-                                </ul>
-                            <li>Daily tasks
-                                <ul>
-                                    <li>maintenance/upgrade operations</li>
-                                    <li>incidents management</li>
-                                    <li>continuous product evolutions</li>
-                                </ul>
-                            <li>But only 18 persons in the SRE team</li>
+                        <h2>Public Cloud unit</h2>
+                        <ul class="fragment">PCI</ul>
+                        <ul class="fragment">PCS</ul>
+                        <ul class="fragment">Ceph</ul>
+                        <aside class="notes">
+                            --> Pratique devops de l'équipe PCI
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>PCI scope</h2>
+                        <ul>
+                            <li class="fragment">VPS</li>
+                            <li class="fragment">Public instances (resources on demand)</li>
+                        </ul>
+                        <aside class="notes">
+                            - En charge de l'offre VPS</br>
+                            - De l'offre Public cloud (resources à la demandes)
+                        </aside>
+
+                    </section>
+                    <section>
+                        <h2>PCI in numbers</h2>
+                        <ul>
+                            <li class="fragment">30 regions (EU, APAC, CA, US)</li>
+                            <li class="fragment">15k hosts</li>
+                            <li class="fragment">310k running instances</li>
+                            <li class="fragment">1.2M created instances / month</li>
+                            <li class="fragment">operated by 18 persons</li>
                         </ul>
                     </section>
-                    <section data-markdown>
-                        ## We needed a robot
-                        ![Mistral](data/mistral_logo.png)
+                    <section>
+                        <h2>What we do @PCI?</h2>
+                        <ul>
+                            <li class="fragment">maintenance / upgrade operations</li>
+                            <li class="fragment">incidents management</li>
+                            <li class="fragment">continuous product evolutions</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>How we work daily?</h2>
+                            <p class="fragment">As a SRE team</p>
+                            <p class="fragment">but let's rewind....</p>
+                    </section>
+                   <section>
+                        <h2>Back to 2012 ... the begining</h2>
+                        <ul>
+                            <p class="fragment">VPS based on Private Cloud infrastructure (VMWare)</p>
+                            <p class="fragment">Managed by 1 team 6 team members</p>
+                            <aside class="notes">
+                                -> D'ou on est parti, les principales étapes,
+                                difficultés et évolutions
+                            </aside>
+                        </ul>
+                    </section>
+                   <section>
+                        <h2>2012 to 2015</h2>
+                        <p class="fragment"><font color='red'>Difficulties</font></p>
+                        <ul>
+                            <li class="fragment">Fire-Fighting mode</li>
+                            <li class="fragment">Few new features</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Mid 2014</h2>
+                        <ul>
+                            <p class="fragment">run team, 2i team</p>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">Later in 2015</h2>
+                        <ul>
+                            <li class="fragment">PCI created (RunAbove)</li>
+                            <li class="fragment">New VPS running on OpenStack</li>
+                            <li class="fragment">2i VPS becomes 2i PCI</li>
+                            <li class="fragment">RunAbove team became R&D team</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">2016 ... need structuring</h2>
+                        <p class="fragment"><font color='red'>Difficulties</font></p>
+                        <ul>
+                            <li class="fragment">The infra grows so the team (mostly run)</li>
+                            <li class="fragment">Siloted teams (run / 2i)</li>
+                            <li class="fragment">Lots of tickets, no efficiency</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">2016 ... need structuring</h2>
+                        <ul>
+                            <li class="fragment">Creation of "Customer's run" (ticketing + run access)</li>
+                            <li class="fragment">Escalation process (master ticket)</li>
+                            <li class="fragment">1 prodding / week by 1 person</li>
+                            <li class="fragment">R&D commits, 2i and run were
+                                prodding</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">2016 ... and tooling</h2>
+                        <ul>
+                            <li class="fragment">CLI tool to help in daily task (run-cli)</li>
+                            <li class="fragment">CLI tool to prod (prod-cli)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">2018 - need a new model</h2>
+                        <p class="fragment"><font color='red'>Difficulties</font></p>
+                        <ul>
+                            <li class="fragment">Fire-fighting mode</li>
+                            <li class="fragment">Run team wants to dev but doesn't have the time (90% vs 10%)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">2018 - what we wanted</h2>
+                        <ul>
+                            <li class="fragment">Give reponsibility</li>
+                            <li class="fragment">Break the wall to mix developers and ops</li>
+                            <li class="fragment">Development for operation (Mistral)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">2018 - common mindset</h2>
+                        <p class="fragment">automate, automate then automate</p>
+                        <p class="fragment">all members of the run & 2i team have to operate the platform</p>
+                        <p class="fragment">you dev, you build, you run</p>
+                    </section>
+                    <section>
+                        <h2 class="fragment">2018 - curent organisation</h2>
+                        <p class="fragment">One Team (no more run, no more 2i)</p>
+                        <p class="fragment">Squads (team member moves, sometime team leader)</p>
+                        <p class="fragment">Squad observability </p>
+                        <p class="fragment">OnCall rotation every 2.5 month + 1 alerting week</p>
+                        <p class="fragment">Implementing DevOps culture at the
+                        infra level (ceremonies: daily, sprint, sprint
+                        feedback, daily < 20min on 4TZ)</p>
+                    </section>
+                    <section>
+                        <h2 class="fragment">Benefits / Difficulties?</h2>
+                        <ul>
+                            <p class="fragment">Benefits</>
+                            <li class="fragment">less frustration</li>
+                            <li class="fragment">very low team turn-over</li>
+                            <li class="fragment">specialization</li>
+                            <li class="fragment">communication</li>
+                            <li class="fragment">team members are much more
+                                concerned by infra issues</li>
+                            <li class="fragment">less human SPOF</li>
+                            <p class="fragment">Difficulties</p>
+                            <li class="fragment">Some don't want to operate</li>
+                            <li class="fragment">Longer onboarding</li>
+                            <li class="fragment">Hiring profile (open minded)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">Why is it successful?</h2>
+                        <p class="fragment">accept errors & unpredictable issues</p>
+                        <p class="fragment">accept to spend time to automate</p>
+                        <p class="fragment">developer at the heart of the infra</p>
+                        <p class="fragment">step by step (one issue => one solution)</p>
+                        <p class="fragment">avoid frustrating tasks being an habit (toil)</p>
+                    </section>
+                    <section>
+                        <h2 class="fragment">2018 - our tools</h2>
+                        <p class="fragment">Opsgenie + Internal Term UI (OVHcloud internal)<p>
+                        <p class="fragment">Atlassian JIRA</p>
+                        <p class="fragment">Alassian Bitbucket</p>
+                        <p class="fragment">Grafana / ELK / Warp 10</p>
+                        <p class="fragment">CI with CDS (OVHcloud open sourced project)</p>
+                        <p class="fragment">runcli (internal tool for daily stuff)</p>
+                        <p class="fragment">prodcli (internal proding cli)</p>
+                        <p class="fragment">Mistral (self-healing)</p>
+                    </section>
+                    <section>
+                        <img src="data/kernel-upgrade.png"></img>
+                    </section>
+                    <section>
+                        <img src="data/autobackup.png"></img>
                     </section>
                 </section>
 
@@ -104,8 +269,13 @@
                     </section>
                 </section>
 
-                <section data-markdown data-background="data/slide.png">
-                    ## Conclusion
+                <section data-background="data/slide.png">
+                    <section>
+                        <h2>Conclusion</h2>
+                        <ul class="fragment">Self-healing tool (Mistral) is central to our SRE model</ul>
+                        <ul class="fragment">No more fire-figthing mode</ul>
+                        <ul class="fragment">Convinced by the model we implemented</ul>
+                    </section>
                 </section>
 
                 <section data-markdown data-background="data/slide.png">
