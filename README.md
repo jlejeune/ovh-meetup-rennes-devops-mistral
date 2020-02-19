@@ -1,6 +1,3 @@
-# Automation to infinity and beyond thanks to Mistral
+# DevOps feedback & self-healing
 
-How OVH PCI team uses OpenStack Mistral to handle their maintenance operations ?
-
-These slides are created using reveal.js https://github.com/hakimel/reveal.js/
-
+How have we implemented DevOps practices in Public Cloud team at OVH.
